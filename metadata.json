@@ -1,0 +1,6 @@
+{
+  "name": "MindFlow - Gemini Journal & Reflections",
+  "description": "A secure, user-authenticated journaling and reflection platform powered by Gemini and Cloud Firestore with encrypted mood tracking, habit streaks, and offline support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

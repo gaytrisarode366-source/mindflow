@@ -1,0 +1,66 @@
+{
+  "entities": {
+    "User": {
+      "collection": "users",
+      "description": "User profile document",
+      "fields": {
+        "uid": { "type": "string", "required": true },
+        "email": { "type": "string", "required": false },
+        "displayName": { "type": "string", "required": false },
+        "photoURL": { "type": "string", "required": false },
+        "createdAt": { "type": "string", "required": true },
+        "lastLoginAt": { "type": "string", "required": true },
+        "encryptionSalt": { "type": "string", "required": false }
+      }
+    },
+    "Entry": {
+      "collection": "users/{userId}/entries",
+      "description": "User journal reflection entries with AI conversation and summaries",
+      "fields": {
+        "id": { "type": "string", "required": true },
+        "userId": { "type": "string", "required": true },
+        "title": { "type": "string", "required": true },
+        "content": { "type": "string", "required": true },
+        "mood": { "type": "string", "required": false },
+        "tags": { "type": "array", "required": false },
+        "summary": { "type": "string", "required": false },
+        "keyTakeaways": { "type": "array", "required": false },
+        "actionItems": { "type": "array", "required": false },
+        "conversation": { "type": "array", "required": false },
+        "wordCount": { "type": "number", "required": false },
+        "isOfflineDraft": { "type": "boolean", "required": false },
+        "createdAt": { "type": "string", "required": true },
+        "updatedAt": { "type": "string", "required": true }
+      }
+    },
+    "Habit": {
+      "collection": "users/{userId}/habits",
+      "description": "Habit formation and daily streak tracking",
+      "fields": {
+        "id": { "type": "string", "required": true },
+        "userId": { "type": "string", "required": true },
+        "title": { "type": "string", "required": true },
+        "frequency": { "type": "string", "required": true },
+        "streakCurrent": { "type": "number", "required": true },
+        "streakLongest": { "type": "number", "required": true },
+        "completedDates": { "type": "array", "required": true },
+        "createdAt": { "type": "string", "required": true },
+        "updatedAt": { "type": "string", "required": true }
+      }
+    },
+    "MoodLog": {
+      "collection": "users/{userId}/moodLogs",
+      "description": "Encrypted mood tracking logs with client-side Web Crypto AES-GCM",
+      "fields": {
+        "id": { "type": "string", "required": true },
+        "userId": { "type": "string", "required": true },
+        "encryptedData": { "type": "string", "required": true },
+        "iv": { "type": "string", "required": true },
+        "moodScore": { "type": "number", "required": true },
+        "energyScore": { "type": "number", "required": true },
+        "timestamp": { "type": "string", "required": true },
+        "createdAt": { "type": "string", "required": true }
+      }
+    }
+  }
+}
