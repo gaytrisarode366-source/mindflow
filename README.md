@@ -193,14 +193,8 @@ npm install
 Create a `.env` file in the root directory:
 
 ```env
-# Server Port (defaults to 3000 if omitted)
+# Server Port (defaults to 3000 
 PORT=3000
-
-# Google Gemini API Key (Kept strictly server-side)
-GEMINI_API_KEY=your_gemini_api_key_here
-```
-
-*(Optional: Set up Firebase config in `src/lib/firebase.ts` if using your own Firebase project).*
 
 ### 4. Start the Local Development Server
 
